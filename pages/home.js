@@ -32,11 +32,26 @@ function Home() {
        </header>
        <main className="flex flex-col xl:flex-row items-center 
           max-w-screen-lg mx-auto">
-              <div className="space-y-6 xl:space-y-10"> 
-                  <hi1 className="text-3xl md:text-5xl text-blue-800/90
-                  max-w-xl !leading-snug pl-4 xl:pl-0"> UPB garantiza excelencia ...</hi1>
+          <div className="space-y-6 xl:space-y-10"> 
+            <hi1 className="text-3xl md:text-5xl text-blue-800/90
+            max-w-xl !leading-snug pl-4 xl:pl-0"> UPB garantiza excelencia ...
+            </hi1>
+              <div className="space-y-4">
+                <div className="intent">
+                  <h2 className="text-xl">Search for a job</h2>
+                  <ArrowForwardIosRoundedIcon className="text-gray-700" />
+                </div>
+                <div className="intent">
+                  <h2 className="text-xl">Find a person you know</h2>
+                  <ArrowForwardIosRoundedIcon className="text-gray-700" />
+                </div>
+                <div className="intent">
+                  <h2 className="text-xl">Learn a new skill</h2>
+                  <ArrowForwardIosRoundedIcon className="text-gray-700" />
+                </div>
               </div>
-          </main>
+          </div>
+        </main>
     </div> 
     );
 }
