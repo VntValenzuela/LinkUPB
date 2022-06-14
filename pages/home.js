@@ -38,15 +38,15 @@ function Home() {
             </hi1>
               <div className="space-y-4">
                 <div className="intent">
-                  <h2 className="text-xl">Search for a job</h2>
+                  <h2 className="text-xl">Buscar trabajos</h2>
                   <ArrowForwardIosRoundedIcon className="text-gray-700" />
                 </div>
                 <div className="intent">
-                  <h2 className="text-xl">Find a person you know</h2>
+                  <h2 className="text-xl">Buscar personas que conoces</h2>
                   <ArrowForwardIosRoundedIcon className="text-gray-700" />
                 </div>
                 <div className="intent">
-                  <h2 className="text-xl">Learn a new skill</h2>
+                  <h2 className="text-xl">Foro</h2>
                   <ArrowForwardIosRoundedIcon className="text-gray-700" />
                 </div>
               </div>
