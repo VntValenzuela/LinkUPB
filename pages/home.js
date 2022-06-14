@@ -28,13 +28,13 @@ function Home() {
               </div>
               
             </div>
-          
-          
+
        </header>
        <main className="flex flex-col xl:flex-row items-center 
           max-w-screen-lg mx-auto">
               <div className="space-y-6 xl:space-y-10"> 
-                  <hi1 className="text-3xl"> UPB garantiza excelencia ...</hi1>
+                  <hi1 className="text-3xl md:text-5xl text-blue-800/90
+                  max-w-xl !leading-snug pl-4 xl:pl-0"> UPB garantiza excelencia ...</hi1>
               </div>
           </main>
     </div> 
