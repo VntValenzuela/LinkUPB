@@ -9,7 +9,7 @@ export async function middleware(req) {
       secureCookie: process.env.NODE_ENV === "production",
     });
     
-    
-    
+    //role === "admin" or name === "John Doe"
+    if (!session) return NextResponse.redirect("/home"); 
   }
 }
