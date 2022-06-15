@@ -19,7 +19,7 @@ function Header(){
                 <SearchRoundedIcon/>
                 <input type="text" placeholder="Search" className="hidden md:inline-flex bg-transparent text-sm focus:outline-none placeholder-black/70 dark:placeholder-white/75 flex-grow"/>
             </div> 
-            
+
             </div>
 
             
@@ -32,6 +32,12 @@ function Header(){
             <HeaderLink Icon={NotificationsIcon} text="Notifications" feed />
             <HeaderLink Icon={Avatar} text="Me" feed avatar hidden />
             <HeaderLink Icon={AppsOutlinedIcon} text="Work" feed hidden />
+            
+            {/* Dark mode */}
+            <div className="bg-gray-600 flex items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative">
+            <span className="absolute left-0">🌜</span>
+            <span className="absolute right-0.5">🌞</span>
+            </div>
 
             </div>
         </header>
