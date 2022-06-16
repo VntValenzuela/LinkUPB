@@ -4,6 +4,14 @@ import Head from 'next/head'
 import Header from '../components/Header'
 
 export default function Home() {
+  const router = useRouter();
+  const { status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      router.push("/home");
+    },
+  });
+
   return (
     <div>
       <Head>
@@ -28,4 +36,10 @@ export async function getServerSideProps(context) {
     };
   }
 
+  return {
+    props: {
+      session,
+    },
+  };
+  
 }
