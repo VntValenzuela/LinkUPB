@@ -1,5 +1,7 @@
 import Image from "next/image";
 import {Avatar} from "@mui/material";
+import BookmarkOutlinedIcon from "@mui/icons-material/BookmarkOutlined";
+import AddRoundedIcon from "@mui/icons-material/AddRounded";
 function Sidebar() 
 {
     return (
@@ -29,6 +31,27 @@ function Sidebar()
                         <h4>Views of your post</h4>
                         <span className="text-blue-500">130</span>
                     </div>
+                </div>
+                <div className="sidebarButton">
+                    <h4 className="leading-4 text-xs">
+                        Access exclusive tools & insights
+                    </h4>
+                </div>
+                <div className="sidebarButton flex items-center space-x-1.5">
+                    <BookmarkOutlinedIcon className="!-ml-1"/>
+                    <h4 className="dark:text-white font-medium">My items</h4>
+                </div>
+            </div>
+            <div className="hidden md:flex bg-white dark:bg-[#1D2226] text-black/70 dark:text-white/75 
+            rounded-lg overflow-hidden flex-col space-y-2 pt-2.5 sticky top-20 border border-gray-300 dark:border-none">
+            <p className="sidebarLink">Groups</p>
+                <div className="flex items-center justify-between">
+                    <p className="sidebarLink">Events</p>
+                    <AddRoundedIcon className="!h-5" />
+                </div>
+                <p className="sidebarLink">Followed Hashtags</p>
+                <div className="sidebarButton text-center">
+                    <h4 className="dark:text-white font-medium text-sm">Discover More</h4>
                 </div>
             </div>
         </div>
