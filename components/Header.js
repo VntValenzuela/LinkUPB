@@ -8,8 +8,15 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import { Avatar } from "@mui/material";
+import { useState } from "react";
+import { useTheme } from "next-themes";
 
 function Header(){
+    const [mounted, setMounted] = useState(false);
+    const { setTheme, resolvedTheme, theme } = useTheme();
+
+    useEffect(() => setMounted(true), []);
+    
     return(
         <header>
             <div className="flex items-center space-x-2 w-full max-w-xs">
