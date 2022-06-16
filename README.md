@@ -38,3 +38,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 ```
+## Install other libraries
+```
+npm install next-theme
+npm install framer-motion
+```
