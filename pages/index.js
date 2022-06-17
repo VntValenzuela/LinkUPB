@@ -3,6 +3,7 @@ import { getSession, useSession } from "next-auth/react";
 import Head from 'next/head'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
+import { useRouter }  from "next/router" ;
 export default function Home() {
   const router = useRouter();
   const { status } = useSession({

@@ -6,7 +6,8 @@ import GroupIcon from "@mui/icons-material/Group";
 import OndemandVideoSharpIcon from "@mui/icons-material/OndemandVideoSharp";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-function Home() {
+import {getProviders, signIn} from "next-auth/react"
+function Home({ providers }) {
   return (
     <div>
       <header className="flex justify-around items-center py-4">
