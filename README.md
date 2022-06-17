@@ -42,4 +42,5 @@ npm install @mui/icons-material
 ```
 npm install next-theme
 npm install framer-motion
+npm install recoil
 ```
