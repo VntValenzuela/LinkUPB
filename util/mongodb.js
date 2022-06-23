@@ -1,32 +1,37 @@
-import { connectToDatabase } from "../../../util/mongodb";
-import { Timestamp } from "mongodb";
+import { MongoClient } from "mongodb";
 
-export default async function handler(req, res) {
-  const { method, body } = req;
+let uri = process.env.MONGODB_URI;
+let dbName = process.env.MONGODB_DB;
 
-  const { db } = await connectToDatabase();
+let cachedClient = null;
+let cachedDb = null;
 
-  if (method === "GET") {
-    try {
-      const posts = await db
-        .collection("posts")
-        .find()
-        .sort({ timestamp: -1 })
-        .toArray();
-      res.status(200).json(posts);
-    } catch (error) {
-      res.status(500).json(error);
-    }
+if (!uri) {
+  throw new Error(
+    "Please define the MONGODB_URI environment variable inside .env.local"
+  );
+}
+
+if (!dbName) {
+  throw new Error(
+    "Please define the MONGODB_DB environment variable inside .env.local"
+  );
+}
+
+export async function connectToDatabase() {
+  if (cachedClient && cachedDb) {
+    return { client: cachedClient, db: cachedDb };
   }
 
-  if (method === "POST") {
-    try {
-      const post = await db
-        .collection("posts")
-        .insertOne({ ...body, timestamp: new Timestamp() });
-      res.status(201).json(post);
-    } catch (error) {
-      res.status(500).json(error);
-    }
-  }
+  const client = await MongoClient.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  const db = await client.db(dbName);
+
+  cachedClient = client;
+  cachedDb = db;
+
+  return { client, db };
 }
