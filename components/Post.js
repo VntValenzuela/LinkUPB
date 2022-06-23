@@ -1,6 +1,9 @@
-import { Avatar } from "@mui/material";
+import { Avatar,IconButton  } from "@mui/material";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/modalAtom";
 
 function Post({post, modalPost}){
+    const [modalOpen, setModalOpen] = useRecoilState(modalState);
     return (
         <div className={`bg-white dark:bg-[#1D2226] ${
             modalPost ? "rounded-r-lg" : "rounded-lg"

@@ -1,3 +1,5 @@
+import { useSession, signOut } from "next-auth/react";
+
 function HeaderLink({Icon,text, avatar, feed, active, hidden}){
     const { data: session } = useSession();
     return (
