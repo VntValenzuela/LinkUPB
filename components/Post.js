@@ -15,11 +15,13 @@ import { useSession } from "next-auth/react";
 
 function Post({post, modalPost}){
     const [modalOpen, setModalOpen] = useRecoilState(modalState)
+    const [modalType, setModalType] = useRecoilState(modalTypeState);
+    const [postState, setPostState] = useRecoilState(getPostState);
     const [showInput, setShowInput] = useState(false);
 
     const truncate = (string, n) =>
     string?.length > n ? string.substr(0, n - 1) + "...see more" : string;
-    
+
     return (
         <div className={`bg-white dark:bg-[#1D2226] ${
             modalPost ? "rounded-r-lg" : "rounded-lg"
@@ -60,6 +62,18 @@ function Post({post, modalPost}){
                     </p>
                 )}
                 </div>
+            )}
+            {post.photoUrl && !modalPost && (
+                <img
+                src={post.photoUrl}
+                alt=""
+                className="w-full cursor-pointer"
+                onClick={() => {
+                    setModalOpen(true);
+                    setModalType("gifYouUp");
+                    setPostState(post);
+                }}
+                />
             )}
 
         </div>
