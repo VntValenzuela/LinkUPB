@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import Input from "./Input";
+import { handlePostState, useSSRPostsState } from "../atoms/postAtom";
 
 function Feed({ posts }) {
   const [realtimePosts, setRealtimePosts] = useState([]);
