@@ -7,6 +7,8 @@ function Form(){
     const uploadPost = async(e) => {
         e.preventDefault();
     }
+    //setHandlePost(true); uncomment later
+
     return (
         <form className="flex flex-col relative space-y-2 text-black/80 dark:text-white/75">
         <textarea
