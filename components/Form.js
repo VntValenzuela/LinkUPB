@@ -3,6 +3,7 @@ import { useState } from "react"
 function Form(){
     const [input, setInput] = useState("");
     const [photoUrl, setPhotoUrl] = useState("");
+    const [handlePost, setHandlePost] = useRecoilState(handlePostState);
     const uploadPost = async(e) => {
         e.preventDefault();
     }

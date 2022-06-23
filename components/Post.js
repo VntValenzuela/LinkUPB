@@ -1,7 +1,8 @@
-function Post(){
+function Post({ post }){
     return (
         <div>
-            post
+            <img src={post.photoUrl} alt="" />
+            <p>{post.input}</p>
         </div>
     )
 }
