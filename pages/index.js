@@ -5,7 +5,13 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import { useRouter }  from "next/router" ;
 import Feed from "../components/Feed";
+import {modalState, modalTypeState} from "../atoms/modalAtom"
+import { AnimatePresence } from "framer-motion";
+import Modal from "../components/Modal";
+import { useRecoilState } from "recoil";
 export default function Home() {
+  const [modalOpen, setModalOpen] = useRecoilState(modalState);
+  const [modalType, setModalType] = useRecoilState(modalTypeState);
   const router = useRouter();
   const { status } = useSession({
     required: true,
@@ -27,6 +33,11 @@ export default function Home() {
       <Sidebar />
       <Feed />
       </div>
+      <AnimatePresence>
+          {modalOpen && (
+            <Modal handleClose={() => setModalOpen(false)} type={modalType} />
+          )}
+        </AnimatePresence>
     </main>
     </div>
   );
