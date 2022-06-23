@@ -1,11 +1,25 @@
+import { useSession } from "next-auth/react";
 import { useState } from "react"
 
 function Form(){
     const [input, setInput] = useState("");
     const [photoUrl, setPhotoUrl] = useState("");
+    const {data: session } = useSession();
     const uploadPost = async(e) => {
         e.preventDefault();
-    }
+
+        const response = await fetch("/api/posts", {
+          method: "POST",
+          body: JSON.stringify({
+            input: input,
+            photoUrl: photoUrl,
+            username: session.user.name,
+            email: session.user.email,
+            userImg: session.user.image,
+            createdAt: new Date().toString()
+          })
+        })
+    };
     return (
         <form className="flex flex-col relative space-y-2 text-black/80 dark:text-white/75">
         <textarea
