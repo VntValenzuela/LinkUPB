@@ -31,41 +31,37 @@ function Sidebar() {
         <div className="hidden md:inline text-left dark:text-white/75 text-sm">
           <div className="font-medium sidebarButton space-y-0.5">
             <div className="flex justify-between space-x-2">
-              <h4>Who viewed your profile</h4>
+              <h4>Quien esta viendo tu perfil</h4>
               <span className="text-blue-500">321</span>
             </div>
             <div className="flex justify-between space-x-2">
-              <h4>Views of your post</h4>
+              <h4>Vistas de tu publicación</h4>
               <span className="text-blue-500">1,892</span>
             </div>
           </div>
 
           <div className="sidebarButton">
             <h4 className="leading-4 text-xs">
-              Access exclusive tools & insights
-            </h4>
-            <h4 className="dark:text-white font-medium">
-              <span className="w-3 h-3 bg-gradient-to-tr from-yellow-700 to-yellow-200 inline-block rounded-sm mr-1" />{" "}
-              Try Premium for free
+              Acceda a herramientas & conocimientos exclusivos
             </h4>
           </div>
 
           <div className="sidebarButton flex items-center space-x-1.5">
             <BookmarkOutlinedIcon className="!-ml-1" />
-            <h4 className="dark:text-white font-medium">My items</h4>
+            <h4 className="dark:text-white font-medium">Mis cosas</h4>
           </div>
         </div>
       </div>
       {/* Bottom */}
       <div className="hidden md:flex bg-white dark:bg-[#1D2226] text-black/70 dark:text-white/75 rounded-lg overflow-hidden flex-col space-y-2 pt-2.5 sticky top-20 border border-gray-300 dark:border-none">
-        <p className="sidebarLink">Groups</p>
+        <p className="sidebarLink">Grupos</p>
         <div className="flex items-center justify-between">
-          <p className="sidebarLink">Events</p>
+          <p className="sidebarLink">Eventos</p>
           <AddRoundedIcon className="!h-5" />
         </div>
-        <p className="sidebarLink">Followed Hashtags</p>
+        <p className="sidebarLink">Hashtags seguidos</p>
         <div className="sidebarButton text-center">
-          <h4 className="dark:text-white font-medium text-sm">Discover More</h4>
+          <h4 className="dark:text-white font-medium text-sm">Descubre más</h4>
         </div>
       </div>
     </div>
