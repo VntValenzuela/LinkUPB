@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../media/Logo.png'
+import logo from '../media/Logo2.png'
 import HeaderLink from "../components/HeaderLink";
 import ExploreIcon from "@mui/icons-material/Explore";
 import GroupIcon from "@mui/icons-material/Group";
@@ -12,7 +12,7 @@ function Home({ providers }) {
     <div>
       <header className="flex justify-around items-center py-4">
         <div className="relative w-52 h-10">
-        <Image src="[logo]" layout="fill" objectFit="contain" />
+        <Image src={ logo } layout="fill" objectFit="contain" />
             </div>
             <div className="flex items-center sm:divide-x divide-gray-300">
               <div className="hidden sm:flex space-x-8 pr-4">
