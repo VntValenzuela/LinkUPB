@@ -7,12 +7,13 @@ import OndemandVideoSharpIcon from "@mui/icons-material/OndemandVideoSharp";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import {getProviders, signIn} from "next-auth/react"
+
 function Home({ providers }) {
   return (
     <div>
       <header className="flex justify-around items-center py-4">
         <div className="relative w-52 h-10">
-        <Image src={ logo } layout="fill" objectFit="contain" />
+        <Image src={ logo }  width={150} height={75} />
             </div>
             <div className="flex items-center sm:divide-x divide-gray-300">
               <div className="hidden sm:flex space-x-8 pr-4">

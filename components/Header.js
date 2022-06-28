@@ -11,6 +11,8 @@ import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import darkModeLogo from "../images/darkMode.jpeg";
+import lightModeLogo from "../images/lightMode.jpeg";
 
 const spring = {
     type: "spring",
@@ -30,9 +32,9 @@ function Header(){
         {mounted && (
           <>
             {resolvedTheme === "dark" ? (
-              <Image src="https://rb.gy/bizvqj" width={45} height={45} />
+              <Image src={darkModeLogo} />
             ) : (
-              <Image src="https://rb.gy/dpmd9s" width={55} height={55} />
+              <Image src={lightModeLogo} />
             )}
           </>
         )}
