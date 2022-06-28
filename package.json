@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
     "autoprefixer": "^10.4.7",
+    "cypress": "^10.2.0",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
